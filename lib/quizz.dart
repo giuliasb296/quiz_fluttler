@@ -26,6 +26,14 @@ class _QuizState extends State<Quiz> {
         ],
       )
     );
-
   }
 }
+
+Widget meuBtn(String resposta) => Container(
+  margin: const EdgeInsets.all(16),
+  width: 160,
+  child: ElevatedButton(
+    onPressed: () {},
+    child: Text(resposta),
+  ),
+  )
