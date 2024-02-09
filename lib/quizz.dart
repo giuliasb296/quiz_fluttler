@@ -22,18 +22,20 @@ class _QuizState extends State<Quiz> {
             color: Colors.deepPurple[50],
             width: double.infinity,
             height: 400,
+          ),
+          Wrap(
+            children:[meuBtn('d'), meuBtn('a'), meuBtn('b'), meuBtn('c')],
           )
         ],
-      )
-    );
+      )    );
   }
 }
 
-Widget meuBtn(String resposta) => Container(
+Widget meuBtn(String resposta, VoidCallback onPressed) => Container(
   margin: const EdgeInsets.all(16),
   width: 160,
   child: ElevatedButton(
     onPressed: () {},
     child: Text(resposta),
   ),
-  )
+  );

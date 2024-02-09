@@ -9,26 +9,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('QuizNovais',
-            style: GoogleFonts.nunitoSans(
+        title: Text('Quiz Novais',
+            style: GoogleFonts.poppins(
                 fontSize: 18, fontWeight: FontWeight.bold)),
-        centerTitle: false,
+        centerTitle: true,
         actions: const [Icon(Icons.search)],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
         children: [
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Text('Desafie \nsua mente!',
                 style: GoogleFonts.poppins(
-                    fontSize: 40, fontWeight: FontWeight.bold)), //text
+                    fontSize: 40, fontWeight: FontWeight.bold), textAlign: TextAlign.center,), //text
           ),
           SizedBox(
             height: 50,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
+                
                 //Todos
                 Container(
                   margin: const EdgeInsets.all(8),
@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.all(8),
                   height: 100,
-                  width: 200,
+                  width: 230,
                   child: Card(
                     color: Colors.green[50],
                     elevation: 4,
@@ -181,7 +181,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.all(8),
                   height: 100,
-                  width: 200,
+                  width: 230,
                   child: Card(
                     color: Colors.blueGrey[50],
                     elevation: 4,
